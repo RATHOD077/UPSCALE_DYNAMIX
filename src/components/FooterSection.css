@@ -365,3 +365,10 @@
     text-align: center;
   }
 }
+
+@media (max-width: 28rem) { /* 448px - small mobile */
+  .footer-main__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

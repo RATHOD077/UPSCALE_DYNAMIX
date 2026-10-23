@@ -74,8 +74,8 @@ export default function Header() {
               <Phone size={12} /> 9833282855
             </a>
             <span className="topstrip__sep">|</span>
-            <a href="mailto:info@upscaledynamix.com" className="topstrip__item">
-              <Mail size={12} /> info@upscaledynamix.com
+            <a href="mailto:upscaledynamix@gmail.com" className="topstrip__item">
+              <Mail size={12} /> upscaledynamix@gmail.com
             </a>
           </div>
           <div className="topstrip__right">
@@ -167,6 +167,27 @@ export default function Header() {
               {l.label}
             </a>
           ))}
+          <div className="nav__drawer-contact">
+            <p className="nav__drawer-label">Quick Connect</p>
+            <a href="mailto:upscaledynamix@gmail.com" className="nav__drawer-contact-item">
+              <Mail size={13} />
+              <span>upscaledynamix@gmail.com (Corporate)</span>
+            </a>
+            <a href="mailto:stevevaz@rediffmail.com" className="nav__drawer-contact-item">
+              <Mail size={13} />
+              <span>stevevaz@rediffmail.com (Personal)</span>
+            </a>
+            <div className="nav__drawer-phones">
+              <a href="tel:9821622152" className="nav__drawer-phone">
+                <Phone size={13} /> 9821622152
+              </a>
+              <span className="nav__drawer-sep">|</span>
+              <a href="tel:9833282855" className="nav__drawer-phone">
+                <Phone size={13} /> 9833282855
+              </a>
+            </div>
+          </div>
+
           <a
             href="https://wa.me/919821622152"
             target="_blank"

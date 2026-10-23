@@ -180,7 +180,7 @@ export default function FounderSection() {
                 <Phone size={15} />
                 <span>Call 9821622152</span>
               </a>
-              <a href="mailto:info@upscaledynamix.com" className="founder__email-btn">
+              <a href="mailto:stevevaz@rediffmail.com" className="founder__email-btn">
                 <Mail size={15} />
                 <span>Email Steve</span>
               </a>

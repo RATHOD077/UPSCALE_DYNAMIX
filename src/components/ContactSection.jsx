@@ -19,9 +19,9 @@ ORG:Upscale Dynamix (Division of Itech Direct)
 TITLE:Founder & CEO
 TEL;TYPE=WORK,VOICE:+919821622152
 TEL;TYPE=CELL,VOICE:+919833282855
-EMAIL;TYPE=WORK:info@upscaledynamix.com
-EMAIL;TYPE=HOME:stevevaz@upscaledynamix.com
-ADR;TYPE=WORK:;;Hoshang Complex, A Wing-501, Vakola;Santacruz (E);Mumbai;Maharashtra;India
+EMAIL;TYPE=WORK:upscaledynamix@gmail.com
+EMAIL;TYPE=HOME:stevevaz@rediffmail.com
+ADR;TYPE=WORK:;;Hoshang Complex, A Wing-501, Vakola;Santacruz (E);Mumbai;400055;India
 NOTE:Upscale Dynamix - Empowering Entrepreneurs Since 2013
 END:VCARD`;
 
@@ -128,26 +128,30 @@ END:VCARD`;
               </a>
 
               {/* Corporate Email */}
-              <a href="mailto:info@upscaledynamix.com" className="contact-btn contact-btn--email">
+              <a href="mailto:upscaledynamix@gmail.com" className="contact-btn contact-btn--email">
                 <div className="contact-btn__icon">
                   <Mail size={18} />
                 </div>
-                <span className="contact-btn__text">E Mail Us (Corporate)</span>
-                <span className="contact-btn__subtext">info@upscaledynamix.com</span>
+                <div className="contact-btn__col">
+                  <span className="contact-btn__text">E Mail Us (Corporate)</span>
+                  <span className="contact-btn__subtext">upscaledynamix@gmail.com</span>
+                </div>
               </a>
 
               {/* Personal Email */}
-              <a href="mailto:stevevaz@upscaledynamix.com" className="contact-btn contact-btn--email">
+              <a href="mailto:stevevaz@rediffmail.com" className="contact-btn contact-btn--email">
                 <div className="contact-btn__icon">
                   <Mail size={18} />
                 </div>
-                <span className="contact-btn__text">E Mail Us (Personal)</span>
-                <span className="contact-btn__subtext">stevevaz@upscaledynamix.com</span>
+                <div className="contact-btn__col">
+                  <span className="contact-btn__text">E Mail Us (Personal)</span>
+                  <span className="contact-btn__subtext">stevevaz@rediffmail.com</span>
+                </div>
               </a>
 
               {/* Address with Map Link */}
               <a
-                href="https://maps.google.com/?q=Hoshang+Complex,+A+Wing-501,+Vakola+Santacruz(E),+Mumbai"
+                href="https://www.google.com/maps/search/Hoshang+Complex%2C+A+Wing-501%2C+Vakola+Santacruz%28E%29Mumbai-400055"
                 target="_blank"
                 rel="noreferrer"
                 className="contact-btn contact-btn--address"
@@ -158,17 +162,25 @@ END:VCARD`;
                 <div className="contact-btn__address-wrap">
                   <span className="contact-btn__label">Address :</span>
                   <span className="contact-btn__address-val">
-                    Hoshang Complex, A Wing-501, Vakola Santacruz(E), Mumbai
+                    Hoshang Complex, A Wing-501, Vakola Santacruz(E), Mumbai - 400055
                   </span>
                 </div>
               </a>
 
-              {/* Company Profile Quick Scroll */}
-              <a href="#hero" className="contact-btn contact-btn--profile">
+              {/* Company Profile PDF Document */}
+              <a
+                href="https://drive.google.com/file/d/13w-Z5RcMjQUeXbw4F9zwc7pSZ-2j-EV6/view?usp=drive_link"
+                target="_blank"
+                rel="noreferrer"
+                className="contact-btn contact-btn--profile"
+              >
                 <div className="contact-btn__icon">
                   <FileText size={18} />
                 </div>
-                <span className="contact-btn__text">Company Profile (Back to Top)</span>
+                <div className="contact-btn__col">
+                  <span className="contact-btn__text">Company Profile (PDF Document)</span>
+                  <span className="contact-btn__subtext">View / Download Official Profile</span>
+                </div>
               </a>
             </div>
 

@@ -351,3 +351,22 @@
   .hero__chip:nth-child(2) { top: 40%; right: -0.25rem; }
   .hero__chip:nth-child(3) { bottom: 4.5rem; left: 0; }
 }
+
+@media (max-width: 25rem) { /* 400px - compact mobile */
+  .hero__card {
+    max-width: 16.5rem;
+  }
+  .hero__photo {
+    height: 20rem;
+  }
+  .hero__chip {
+    padding: 0.5rem 0.625rem;
+    min-width: 3.75rem;
+  }
+  .hero__chip-val {
+    font-size: 1rem;
+  }
+  .hero__chip-lbl {
+    font-size: 0.5625rem;
+  }
+}

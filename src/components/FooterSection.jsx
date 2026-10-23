@@ -115,19 +115,24 @@ export default function FooterSection() {
               <li className="footer-contact-item">
                 <Mail size={14} className="footer-contact-icon" />
                 <div className="footer-contact-emails">
-                  <a href="mailto:info@upscaledynamix.com" className="footer-link">
-                    info@upscaledynamix.com (Corporate)
+                  <a href="mailto:upscaledynamix@gmail.com" className="footer-link">
+                    upscaledynamix@gmail.com (Corporate)
                   </a>
-                  <a href="mailto:stevevaz@upscaledynamix.com" className="footer-link footer-link--sub">
-                    stevevaz@upscaledynamix.com (Personal)
+                  <a href="mailto:stevevaz@rediffmail.com" className="footer-link footer-link--sub">
+                    stevevaz@rediffmail.com (Personal)
                   </a>
                 </div>
               </li>
               <li className="footer-contact-item">
                 <MapPin size={14} className="footer-contact-icon" />
-                <span className="footer-link">
-                  Hoshang Complex, A Wing-501, Vakola Santacruz(E), Mumbai
-                </span>
+                <a
+                  href="https://www.google.com/maps/search/Hoshang+Complex%2C+A+Wing-501%2C+Vakola+Santacruz%28E%29Mumbai-400055"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="footer-link"
+                >
+                  Hoshang Complex, A Wing-501, Vakola Santacruz(E), Mumbai - 400055
+                </a>
               </li>
             </ul>
 
