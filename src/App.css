@@ -54,6 +54,9 @@ html {
   scroll-padding-top: 5.625rem;
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 @media (max-width: 48rem) { /* 768px */
@@ -87,9 +90,16 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
   width: 100%;
-  min-width: 20rem; /* 320px minimum mobile screen width */
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#root, .app {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* ── Layout ── */

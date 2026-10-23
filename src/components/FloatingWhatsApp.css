@@ -112,7 +112,7 @@
 
 @media (max-width: 37.5rem) { /* 600px */
   .floating-wa {
-    bottom: 1.25rem;
+    bottom: 4.5rem;
     right: 1.25rem;
   }
   .floating-wa__btn {
