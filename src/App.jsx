@@ -5,6 +5,7 @@ import AboutSection from './components/AboutSection';
 import StatsSection from './components/StatsSection';
 import ServicesSection from './components/ServicesSection';
 import FounderSection from './components/FounderSection';
+import ExecutiveTrajectory from './components/ExecutiveTrajectory';
 import ContactSection from './components/ContactSection';
 import FooterSection from './components/FooterSection';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
@@ -20,6 +21,7 @@ function App() {
         <StatsSection />
         <ServicesSection />
         <FounderSection />
+        <ExecutiveTrajectory />
         <ContactSection />
       </main>
       <FooterSection />
