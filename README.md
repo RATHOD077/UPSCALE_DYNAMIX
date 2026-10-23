@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# UPSCALE_DYNAMIX
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> **Upscale Dynamix** — Division of Itech Direct  
+> Empowering Entrepreneurs in their journey of growth since 2013.
 
-## Available Scripts
+## Overview
+Upscale Dynamix is India's premier business growth partner led by **Steve Vaz** (30+ years of frontline experience in Sales, Media, and Marketing). We combine technology platforms, retainer media sales, 715M PR audience reach, and nationwide project sales teams to equip entrepreneurs at every stage of business expansion.
 
-In the project directory, you can run:
+## Key Capabilities & Strategic Services
+1. **Apps & Software Development** – Custom CRM, ERP platforms, web & mobile applications.
+2. **Media Sales** – Retainer-based media sales management across all major media channels.
+3. **Digital Marketing** – High-ROI performance marketing, lead generation, and funnel optimization.
+4. **PR – Publicity & Promotions** – Features on 200+ news portals reaching over 715 Million readers.
+5. **Marketing Strategies** – Bespoke Go-to-Market (GTM) frameworks and positioning roadmaps.
+6. **Project Sales** – Turnkey nationwide sales force deployment for immediate revenue generation.
+7. **Technology Products** – Proprietary everyday promotion utilities driving operational cost reduction.
 
-### `npm start`
+## Tech Stack
+- **React 18**
+- **Lucide Icons**
+- **Custom Responsive `rem` Architecture** (Mobile-first, accessible, fluid typography)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Local Development
+```bash
+# Install dependencies
+npm install
 
-### `npm test`
+# Start development server
+npm start
+```
+Runs at [http://localhost:3000](http://localhost:3000).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Production Build
+```bash
+npm run build
+```
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact & Leadership
+- **Founder & CEO**: Steve Vaz
+- **Headquarters**: Hoshang Complex, A Wing-501, Vakola Santacruz(E), Mumbai, Maharashtra, India
+- **Phone**: +91 9821622152 / +91 9833282855
+- **Email**: info@upscaledynamix.com

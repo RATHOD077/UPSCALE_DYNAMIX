@@ -1,0 +1,360 @@
+/* =============================================
+   FOUNDER SECTION – Fully Responsive (rem)
+   ============================================= */
+
+.founder__strip {
+  height: 0.3125rem;
+  background: linear-gradient(90deg, var(--navy) 0%, var(--red) 40%, var(--gold) 100%);
+}
+
+.founder__wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 5.5rem;
+  align-items: center;
+}
+
+/* ── Photo column ── */
+.founder__photo-col {
+  position: relative;
+}
+
+.founder__photo-frame {
+  position: relative;
+}
+
+/* Offset background block */
+.founder__photo-bg-block {
+  position: absolute;
+  top: 1.875rem;
+  left: -1.25rem;
+  right: 1.25rem;
+  bottom: -1.25rem;
+  background: linear-gradient(135deg, var(--navy-deep), var(--navy));
+  border-radius: var(--radius-xl);
+  z-index: 0;
+}
+
+/* Photo card */
+.founder__photo-card {
+  position: relative;
+  z-index: 1;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.founder__photo {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.founder__photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(8,14,31,0.94) 100%);
+  z-index: 1;
+}
+
+.founder__identity {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 1.375rem 1.5rem;
+}
+
+.founder__identity-logo {
+  width: 2.625rem;
+  height: 2.625rem;
+  border-radius: var(--radius-sm);
+  object-fit: contain;
+  border: 0.125rem solid rgba(255,255,255,0.2);
+  background: var(--white);
+  padding: 0.125rem;
+  flex-shrink: 0;
+}
+
+.founder__identity-name {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.1;
+}
+.founder__identity-role {
+  font-size: 0.75rem;
+  color: var(--gold);
+  font-weight: 600;
+}
+.founder__identity-div {
+  font-size: 0.65625rem;
+  color: rgba(255,255,255,0.45);
+}
+
+/* Experience badge */
+.founder__badge {
+  position: absolute;
+  top: 1.25rem;
+  right: -0.875rem;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 0.125rem solid var(--gray-200);
+  z-index: 2;
+}
+.founder__badge-icon {
+  color: var(--red);
+  flex-shrink: 0;
+}
+.founder__badge-val {
+  font-size: 0.9375rem;
+  font-weight: 900;
+  color: var(--navy);
+  line-height: 1;
+}
+.founder__badge-sub {
+  font-size: 0.65625rem;
+  color: var(--gray-400);
+  font-weight: 600;
+  margin-top: 0.1875rem;
+}
+
+/* ── Content ── */
+
+/* Quote block */
+.founder__quote-block {
+  background: var(--gray-100);
+  border-left: 0.25rem solid var(--red);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 1.5rem 1.5rem 1.25rem;
+  margin: 1.25rem 0 1.75rem;
+  position: relative;
+}
+.founder__quote-icon {
+  color: var(--red);
+  opacity: 0.25;
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+}
+.founder__quote {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-style: italic;
+  color: var(--navy);
+  line-height: 1.65;
+  margin-bottom: 0.625rem;
+}
+.founder__quote-attr {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--red);
+  letter-spacing: 0.03rem;
+}
+
+.founder__bio {
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: var(--text-body);
+  margin-bottom: 0.875rem;
+}
+
+/* Expertise grid */
+.founder__expertise {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.625rem;
+  margin: 1.75rem 0 2.25rem;
+}
+.founder__exp-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  background: var(--gray-100);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 0.875rem;
+  transition: var(--transition);
+}
+.founder__exp-item:hover {
+  background: var(--navy);
+  transform: translateY(-0.125rem);
+}
+.founder__exp-item:hover .founder__exp-icon {
+  background: rgba(255,255,255,0.1);
+  color: var(--gold);
+}
+.founder__exp-item:hover .founder__exp-label { color: var(--white); }
+.founder__exp-item:hover .founder__exp-sub   { color: rgba(255,255,255,0.5); }
+
+.founder__exp-icon {
+  width: 2.125rem;
+  height: 2.125rem;
+  background: rgba(230,51,41,0.1);
+  color: var(--red);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+.founder__exp-label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--navy);
+  transition: color 0.2s;
+}
+.founder__exp-sub {
+  font-size: 0.6875rem;
+  color: var(--gray-400);
+  transition: color 0.2s;
+}
+
+.founder__cta-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.founder__call-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8125rem 1.375rem;
+  background: var(--off-white);
+  color: var(--navy);
+  border: 0.09375rem solid var(--gray-200);
+  border-radius: 3.125rem;
+  text-decoration: none;
+  font-size: 0.84375rem;
+  font-weight: 700;
+  transition: var(--transition);
+}
+.founder__call-btn:hover {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+  transform: translateY(-0.125rem);
+}
+
+.founder__email-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8125rem 1.25rem;
+  background: transparent;
+  color: var(--text-body);
+  border: 0.09375rem solid var(--gray-200);
+  border-radius: 3.125rem;
+  text-decoration: none;
+  font-size: 0.84375rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+.founder__email-btn:hover {
+  background: var(--gray-100);
+  color: var(--navy);
+  border-color: var(--gray-400);
+  transform: translateY(-0.125rem);
+}
+
+/* Credentials card */
+.founder__creds-card {
+  margin-top: 1.5rem;
+  background: var(--off-white);
+  border: 0.0625rem solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 1.125rem 1.375rem;
+  box-shadow: var(--shadow-sm);
+}
+.founder__creds-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78125rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+}
+.founder__creds-icon {
+  color: var(--gold);
+}
+.founder__creds-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+.founder__cred-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+.founder__cred-check {
+  color: var(--red);
+  flex-shrink: 0;
+}
+
+/* ── Mobile Breakpoints ── */
+@media (max-width: 56.25rem) { /* 900px */
+  .founder__wrap {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .founder__photo-col {
+    order: -1;
+    max-width: 25rem;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .founder__badge {
+    right: 0.5rem;
+    top: 0.5rem;
+  }
+  .founder__expertise {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 32rem) { /* 512px */
+  .founder__photo {
+    height: 22rem;
+  }
+  .founder__photo-bg-block {
+    top: 1rem;
+    left: -0.625rem;
+    right: 0.625rem;
+    bottom: -0.625rem;
+  }
+  .founder__expertise {
+    grid-template-columns: 1fr;
+  }
+  .founder__cta-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .founder__cta-row .btn-red,
+  .founder__cta-row .btn-wa,
+  .founder__cta-row .founder__call-btn,
+  .founder__cta-row .founder__email-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
