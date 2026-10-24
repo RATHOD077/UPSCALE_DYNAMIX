@@ -1,14 +1,36 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import {
+  Menu,
+  X,
+  Phone,
+  Mail,
+  MapPin,
+  Home,
+  Briefcase,
+  Award,
+  User,
+  ChevronRight,
+  Send
+} from 'lucide-react';
 import logo from '../assets/logo.jpg';
 import WhatsAppLogo from './WhatsAppLogo';
 import './Header.css';
 
-const navLinks = [
-  { label: 'About',    href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Founder',  href: '#founder' },
-  { label: 'Contact',  href: '#contact' },
+const desktopNavLinks = [
+  { label: 'About',        href: '#about' },
+  { label: 'Services',     href: '#services' },
+  { label: 'Founder',      href: '#founder' },
+  { label: 'Track Record', href: '#portfolio' },
+  { label: 'Contact',      href: '#contact' },
+];
+
+const mobileNavItems = [
+  { label: 'Home',         href: '#hero',      desc: 'Main Profile Overview',       icon: Home,         badge: 'Start' },
+  { label: 'About',        href: '#about',     desc: 'Vision & 25+ Yrs Excellence', icon: Award,        badge: 'Vision' },
+  { label: 'Services',     href: '#services',  desc: '7 Business Scaling Platforms',icon: Briefcase,    badge: '7 Platforms' },
+  { label: 'Founder',      href: '#founder',   desc: 'Steve Vaz Credentials',      icon: User,         badge: 'Executive' },
+  { label: 'Track Record', href: '#portfolio', desc: 'Milestones & Trajectory',    icon: Award,        badge: '25+ Yrs' },
+  { label: 'Contact',      href: '#contact',   desc: 'Get In Touch Directly',      icon: Send,         badge: 'Direct' },
 ];
 
 export default function Header() {
@@ -18,13 +40,35 @@ export default function Header() {
     typeof window !== 'undefined' ? window.location.hash || '' : ''
   );
 
+  // Lock body scroll when side drawer is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
+
+  // Close on Escape key
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && menuOpen) {
+        setMenuOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [menuOpen]);
+
   // Scroll listener for sticky header & scroll-spy
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
 
-      // Scroll-spy: identify which section is currently active
-      const sections = ['about', 'services', 'founder', 'contact'];
+      const sections = ['hero', 'about', 'services', 'founder', 'portfolio', 'contact'];
       const scrollPos = window.scrollY + 140;
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -110,9 +154,9 @@ export default function Header() {
             </div>
           </a>
 
-          {/* Links */}
+          {/* Desktop Links */}
           <nav className="nav__links">
-            {navLinks.map(l => (
+            {desktopNavLinks.map(l => (
               <a
                 key={l.label}
                 href={l.href}
@@ -148,66 +192,156 @@ export default function Header() {
             <button
               className="nav__burger"
               onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="Toggle Navigation Menu"
+              aria-label={menuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
+              aria-expanded={menuOpen}
             >
               {menuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
         </div>
+      </header>
 
-        {/* Mobile drawer */}
-        <div className={`nav__drawer ${menuOpen ? 'nav__drawer--open' : ''}`}>
-          {navLinks.map(l => (
-            <a
-              key={l.label}
-              href={l.href}
-              className={`nav__drawer-link ${activeNav === l.href ? 'nav__drawer-link--active' : ''}`}
-              onClick={(e) => handleNavClick(e, l.href)}
-            >
-              {l.label}
-            </a>
-          ))}
-          <div className="nav__drawer-contact">
-            <p className="nav__drawer-label">Quick Connect</p>
-            <a href="mailto:upscaledynamix@gmail.com" className="nav__drawer-contact-item">
-              <Mail size={13} />
-              <span>upscaledynamix@gmail.com (Corporate)</span>
-            </a>
-            <a href="mailto:stevevaz@rediffmail.com" className="nav__drawer-contact-item">
-              <Mail size={13} />
-              <span>stevevaz@rediffmail.com (Personal)</span>
-            </a>
-            <div className="nav__drawer-phones">
-              <a href="tel:9821622152" className="nav__drawer-phone">
-                <Phone size={13} /> 9821622152
-              </a>
-              <span className="nav__drawer-sep">|</span>
-              <a href="tel:9833282855" className="nav__drawer-phone">
-                <Phone size={13} /> 9833282855
-              </a>
+      {/* Mobile Slide-in Side Drawer Backdrop */}
+      <div
+        className={`side-drawer__backdrop ${menuOpen ? 'side-drawer__backdrop--visible' : ''}`}
+        onClick={() => setMenuOpen(false)}
+        aria-hidden="true"
+      />
+
+      {/* Mobile Slide-in Side Drawer */}
+      <aside
+        className={`side-drawer ${menuOpen ? 'side-drawer--open' : ''}`}
+        aria-label="Mobile Navigation Drawer"
+      >
+        {/* Drawer Header */}
+        <div className="side-drawer__header">
+          <div className="side-drawer__brand">
+            <img src={logo} alt="Upscale Dynamix" className="side-drawer__logo" />
+            <div>
+              <div className="side-drawer__title">UPSCALE <em>DYNAMIX</em></div>
+              <div className="side-drawer__subtitle">Steve Vaz · Executive Profile</div>
             </div>
           </div>
-
-          <a
-            href="https://wa.me/919821622152"
-            target="_blank"
-            rel="noreferrer"
-            className="nav__drawer-wa"
+          <button
+            className="side-drawer__close"
             onClick={() => setMenuOpen(false)}
+            aria-label="Close Menu"
           >
-            <WhatsAppLogo size={18} color="#ffffff" />
-            <span>Chat on WhatsApp</span>
-          </a>
-          <a
-            href="#contact"
-            className="btn-red"
-            style={{ marginTop: '0.5rem' }}
-            onClick={(e) => handleNavClick(e, '#contact')}
-          >
-            Get In Touch
-          </a>
+            <X size={20} />
+          </button>
         </div>
-      </header>
+
+        {/* Drawer Scrollable Body */}
+        <div className="side-drawer__body">
+          {/* Section: Menu Navigation */}
+          <div className="side-drawer__section-title">
+            <span>Navigation Menu</span>
+          </div>
+
+          <nav className="side-drawer__nav">
+            {mobileNavItems.map((item) => {
+              const IconComp = item.icon;
+              const isActive = activeNav === item.href;
+              return (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className={`side-drawer__nav-link ${isActive ? 'side-drawer__nav-link--active' : ''}`}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                >
+                  <span className="side-drawer__nav-icon">
+                    <IconComp size={16} />
+                  </span>
+                  <div className="side-drawer__nav-info">
+                    <span className="side-drawer__nav-title">{item.label}</span>
+                    <span className="side-drawer__nav-desc">{item.desc}</span>
+                  </div>
+                  {item.badge && (
+                    <span className="side-drawer__nav-badge">{item.badge}</span>
+                  )}
+                  <ChevronRight size={14} className="side-drawer__nav-arrow" />
+                </a>
+              );
+            })}
+          </nav>
+
+          {/* Quick Action CTAs */}
+          <div className="side-drawer__actions">
+            <a
+              href="https://wa.me/919821622152?text=Hello%20Steve%20Vaz,%20I%20would%20like%20to%20discuss%20Upscale%20Dynamix%20opportunities."
+              target="_blank"
+              rel="noreferrer"
+              className="side-drawer__wa-btn"
+              onClick={() => setMenuOpen(false)}
+            >
+              <WhatsAppLogo size={18} color="#ffffff" />
+              <span>Chat on WhatsApp Direct</span>
+            </a>
+
+            <a
+              href="#contact"
+              className="btn-red side-drawer__cta-btn"
+              onClick={(e) => handleNavClick(e, '#contact')}
+            >
+              Get In Touch With Steve
+            </a>
+          </div>
+
+          {/* Section: Direct Contact Details */}
+          <div className="side-drawer__section-title">
+            <span>Direct Contact Details</span>
+          </div>
+
+          <div className="side-drawer__contact-box">
+            <div className="side-drawer__contact-group">
+              <span className="side-drawer__contact-label">Corporate Email</span>
+              <a href="mailto:upscaledynamix@gmail.com" className="side-drawer__contact-item">
+                <Mail size={13} className="side-drawer__icon-red" />
+                <span>upscaledynamix@gmail.com</span>
+              </a>
+            </div>
+
+            <div className="side-drawer__contact-group">
+              <span className="side-drawer__contact-label">Personal Email</span>
+              <a href="mailto:stevevaz@rediffmail.com" className="side-drawer__contact-item">
+                <Mail size={13} className="side-drawer__icon-red" />
+                <span>stevevaz@rediffmail.com</span>
+              </a>
+            </div>
+
+            <div className="side-drawer__contact-group">
+              <span className="side-drawer__contact-label">Direct Phone Numbers</span>
+              <div className="side-drawer__phones">
+                <a href="tel:9821622152" className="side-drawer__phone-link">
+                  <Phone size={13} className="side-drawer__icon-red" />
+                  <span>9821622152</span>
+                </a>
+                <span className="side-drawer__sep">•</span>
+                <a href="tel:9833282855" className="side-drawer__phone-link">
+                  <Phone size={13} className="side-drawer__icon-red" />
+                  <span>9833282855</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="side-drawer__contact-group">
+              <span className="side-drawer__contact-label">Office Address</span>
+              <div className="side-drawer__contact-item side-drawer__address">
+                <MapPin size={13} className="side-drawer__icon-red" />
+                <span>Hoshang Complex, A Wing-501, Vakola Santacruz(E), Mumbai - 400055</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Drawer Footer */}
+        <div className="side-drawer__footer">
+          <p className="side-drawer__footer-text">
+            <strong>UPSCALE DYNAMIX</strong> · Division of Itech Direct
+          </p>
+          <span className="side-drawer__footer-badge">Founded 2013 · 25+ Yrs Excellence</span>
+        </div>
+      </aside>
     </>
   );
 }
