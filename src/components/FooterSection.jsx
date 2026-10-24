@@ -137,7 +137,7 @@ export default function FooterSection() {
             </ul>
 
             <div className="footer-tag">
-              <span>Founded by Steve Vaz (30+ Yrs Exp)</span>
+              <span>Founded by Steve Vaz (25+ Yrs Exp)</span>
             </div>
           </div>
         </div>

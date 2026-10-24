@@ -5,12 +5,6 @@ import logo from '../assets/logo.jpg';
 import WhatsAppLogo from './WhatsAppLogo';
 import './HeroSection.css';
 
-const chips = [
-  { value: '30+', label: 'Years\nExperience', delay: 0 },
-  { value: '715M', label: 'PR\nAudience', delay: 0.6 },
-  { value: '200+', label: 'PR\nWebsites', delay: 1.2 },
-];
-
 export default function HeroSection() {
   const canvasRef = useRef(null);
 
@@ -69,22 +63,22 @@ export default function HeroSection() {
           </div>
 
           <h1 className="hero__headline">
-            We Elevate<br />
-            <span className="hero__headline-accent">Entrepreneurs</span><br />
-            to Greatness
+            We help Enterpreuners to<br />
+            <span className="hero__headline-accent">UPSCALE Revenues</span>
           </h1>
 
           <p className="hero__sub">
-            Upscale Dynamix is India's premier business growth partner — delivering
-            technology, marketing mastery, and sales excellence to entrepreneurs
-            ready to scale without limits.
+            Delivering Technology, Sales &amp; Marketing Excellence to Enterpreneurs ready to scale without limits.
           </p>
 
           <div className="hero__pills">
             <span className="hero__pill">● Technology</span>
-            <span className="hero__pill">● Media Sales</span>
+            <span className="hero__pill">● Business APPs</span>
+            <span className="hero__pill">● Sales Mgmt - Projects</span>
+            <span className="hero__pill">● Marketing Strategies</span>
+            <span className="hero__pill">● PR - Publicity</span>
             <span className="hero__pill">● Digital Marketing</span>
-            <span className="hero__pill">● PR &amp; Promotions</span>
+            <span className="hero__pill">● Impression- Inhouse Brand</span>
           </div>
 
           <div className="hero__actions">
@@ -111,21 +105,8 @@ export default function HeroSection() {
           </a>
         </div>
 
-        {/* ── RIGHT: founder card ── */}
+        {/* ── RIGHT: founder card (clean - no floating patches) ── */}
         <div className="hero__right">
-
-          {/* Stat chips */}
-          {chips.map((c, i) => (
-            <div key={i} className="hero__chip" style={{
-              animationDelay: `${c.delay}s`,
-              '--chip-idx': i,
-            }}>
-              <span className="hero__chip-val">{c.value}</span>
-              <span className="hero__chip-lbl">{c.label}</span>
-            </div>
-          ))}
-
-          {/* Photo card */}
           <div className="hero__card">
             <div className="hero__card-glow" />
             <img src={steveVaz} alt="Steve Vaz, Founder & CEO" className="hero__photo" />
@@ -133,15 +114,11 @@ export default function HeroSection() {
             {/* Name plate */}
             <div className="hero__nameplate">
               <div className="hero__nameplate-left">
-                <img src={logo} alt="logo" className="hero__nameplate-logo" />
+                <img src={logo} alt="Upscale Dynamix" className="hero__nameplate-logo" />
                 <div>
                   <p className="hero__nameplate-name">Steve Vaz</p>
-                  <p className="hero__nameplate-role">Founder &amp; CEO</p>
+                  <p className="hero__nameplate-role">Founder &amp; CEO · Upscale Dynamix</p>
                 </div>
-              </div>
-              <div className="hero__nameplate-badge">
-                <span>30+</span>
-                <small>Yrs</small>
               </div>
             </div>
           </div>

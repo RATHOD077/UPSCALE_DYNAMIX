@@ -6,7 +6,7 @@ import WhatsAppLogo from './WhatsAppLogo';
 import './FounderSection.css';
 
 const expertise = [
-  { icon: <TrendingUp size={16} />, label: 'Sales & Marketing', sub: '30+ Years Mastery' },
+  { icon: <TrendingUp size={16} />, label: 'Sales & Marketing', sub: '25+ Years Mastery' },
   { icon: <Users size={16} />,      label: 'Entrepreneur Growth', sub: 'Pan-India Reach' },
   { icon: <Award size={16} />,      label: 'Media & Digital', sub: 'All Major Platforms' },
   { icon: <Star size={16} />,       label: 'Technology Products', sub: 'Proprietary IP' },
@@ -16,7 +16,7 @@ const credentials = [
   'Founded Upscale Dynamix in 2013',
   'Strategic Division of Itech Direct',
   'Spearheading 715M+ Digital PR Network',
-  '30+ Years Frontline Commercial Leadership',
+  '25+ Years Frontline Commercial Leadership',
 ];
 
 export default function FounderSection() {
@@ -94,7 +94,7 @@ export default function FounderSection() {
               <div className="founder__badge">
                 <Award size={22} className="founder__badge-icon" />
                 <div>
-                  <p className="founder__badge-val">30+ Years</p>
+                  <p className="founder__badge-val">25+ Years</p>
                   <p className="founder__badge-sub">Sales &amp; Marketing Expert</p>
                 </div>
               </div>
@@ -137,7 +137,7 @@ export default function FounderSection() {
             </div>
 
             <p className="founder__bio">
-              Steve Vaz is a seasoned veteran with over <strong>30 years of frontline experience</strong> in
+              Steve Vaz is a seasoned veteran with over <strong>25 years of frontline experience</strong> in
               Sales, Media, and Marketing across diverse Indian industries. In 2013, he founded
               <strong> Upscale Dynamix</strong> with a clear mandate: equip every entrepreneur with the same
               world-class execution power and commercial resources that large conglomerates command.

@@ -3,7 +3,7 @@ import './StatsSection.css';
 
 const stats = [
   { end: 2013, suffix: '',   label: 'Year Founded',      caption: 'Over a decade of proven results' },
-  { end: 30,   suffix: '+',  label: 'Years Experience',  caption: 'Industry veteran leadership' },
+  { end: 25,   suffix: '+',  label: 'Years Experience',  caption: 'Industry veteran leadership' },
   { end: 200,  suffix: '+',  label: 'PR Websites',       caption: 'For nationwide brand presence' },
   { end: 715,  suffix: 'M', label: 'Audience Reach',    caption: 'Combined PR platform reach' },
 ];

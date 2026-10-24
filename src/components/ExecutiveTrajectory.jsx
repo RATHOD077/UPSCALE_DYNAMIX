@@ -4,7 +4,7 @@ import './ExecutiveTrajectory.css';
 
 const milestones = [
   {
-    period: '30+ Years',
+    period: '25+ Years',
     badge: 'Frontline Mastery',
     icon: <Award size={20} />,
     title: 'Media & Sales Industry Veteran',
@@ -69,7 +69,7 @@ export default function ExecutiveTrajectory() {
           <h2 className="display-title">Career Trajectory &amp; Advisory Model</h2>
           <span className="gold-line" />
           <p className="section-sub">
-            Three decades of frontline commercial intuition combined with modern technology 
+            Over 25 years of frontline commercial intuition combined with modern technology 
             infrastructure—built to help entrepreneurs scale with clarity.
           </p>
         </div>
@@ -102,7 +102,7 @@ export default function ExecutiveTrajectory() {
             </h3>
             <p className="advisory-banner__desc">
               When you partner with Upscale Dynamix, you collaborate directly with Steve Vaz. 
-              No junior delegators—just 30+ years of battle-tested sales psychology, high-level 
+              No junior delegators—just 25+ years of battle-tested sales psychology, high-level 
               media relationships, and dedicated technological execution.
             </p>
             <div className="advisory-banner__points">

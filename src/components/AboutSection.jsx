@@ -3,7 +3,7 @@ import { CheckCircle2, Target, Lightbulb, TrendingUp } from 'lucide-react';
 import './AboutSection.css';
 
 const highlights = [
-  'Founded 2013 — 30+ years of Sales & Marketing mastery',
+  'Founded 2013 — 25+ years of Sales & Marketing mastery',
   'Serving entrepreneurs across multiple industries',
   'Technology + Strategy + Sales — all under one roof',
   'Nationwide sales force & 715M PR audience reach',
@@ -43,7 +43,7 @@ export default function AboutSection() {
             </div>
             <div className="about__stat-divider" />
             <div className="about__stat-exp">
-              <span className="about__stat-num about__stat-num--red">30<sup>+</sup></span>
+              <span className="about__stat-num about__stat-num--red">25<sup>+</sup></span>
               <span className="about__stat-label">Years Experience</span>
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function AboutSection() {
         <div className="about__right reveal" ref={rightRef} style={{ animationName: 'revealRight', animationDelay: '0.1s' }}>
           <span className="eyebrow">Who We Are</span>
           <h2 className="display-title">
-            Three Decades<br />of Business<br />Excellence
+            25+ Years<br />of Business<br />Excellence
           </h2>
           <span className="gold-line" />
 
@@ -88,7 +88,7 @@ export default function AboutSection() {
           </p>
 
           <p className="about__body">
-            Drawing on 30+ years of frontline experience in Sales, Media, and Marketing,
+            Drawing on 25+ years of frontline experience in Sales, Media, and Marketing,
             we combine technology precision with strategic creativity to deliver transformational
             business outcomes — serving clients across diverse industries nationwide.
           </p>

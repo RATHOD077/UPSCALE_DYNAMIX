@@ -45,7 +45,7 @@ const services = [
     title: 'Media Sales',
     tagline: 'Decades of media expertise, at your service',
     highlightBadge: 'Retainer-Based Management',
-    desc: 'With deep understanding of all media platforms built over 30+ years, we offer retainer-based media sales management — bringing proven commercial expertise directly to your brand’s revenue journey.',
+    desc: 'With deep understanding of all media platforms built over 25+ years, we offer retainer-based media sales management — bringing proven commercial expertise directly to your brand’s revenue journey.',
     capabilities: [
       'Dedicated retainer-based media sales leadership',
       'Multi-platform advertising inventory monetization',
