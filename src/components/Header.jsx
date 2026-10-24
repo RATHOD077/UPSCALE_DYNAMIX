@@ -340,6 +340,9 @@ export default function Header() {
             <strong>UPSCALE DYNAMIX</strong> · Division of Itech Direct
           </p>
           <span className="side-drawer__footer-badge">Founded 2013 · 25+ Yrs Excellence</span>
+          <p className="side-drawer__footer-powered">
+            Powered by <a href="https://grabodo.com" target="_blank" rel="noreferrer">Grabodo Digital Services</a>
+          </p>
         </div>
       </aside>
     </>

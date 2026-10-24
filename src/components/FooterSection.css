@@ -293,6 +293,23 @@
   color: rgba(255,255,255,0.3);
 }
 
+.footer-powered {
+  color: rgba(255,255,255,0.55) !important;
+  font-size: 0.75rem;
+}
+
+.footer-powered__link {
+  color: var(--gold);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-powered__link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 /* ── Mobile & Tablet Breakpoints ── */
 @media (max-width: 56.25rem) { /* 900px */
   .footer-cta {

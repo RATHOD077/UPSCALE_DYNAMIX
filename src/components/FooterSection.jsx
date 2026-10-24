@@ -147,6 +147,9 @@ export default function FooterSection() {
       <div className="footer-bottom">
         <div className="container footer-bottom__inner">
           <p>© {new Date().getFullYear()} Upscale Dynamix — Division of Itech Direct. All Rights Reserved.</p>
+          <p className="footer-powered">
+            Powered by <a href="https://grabodo.com" target="_blank" rel="noreferrer" className="footer-powered__link">Grabodo Digital Services</a>
+          </p>
           <p>Founder &amp; CEO: Steve Vaz | Empowering Entrepreneurs Since 2013</p>
         </div>
       </div>
